@@ -1,7 +1,16 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Layout from "./Global/Layout";
+import HomePage from "./Pages/HomePage";
 
 function App() {
-  return <button class="btn btn-primary">Button</button>;
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+      </Route>
+    </Routes>
+  );
 }
 
 export default App;
